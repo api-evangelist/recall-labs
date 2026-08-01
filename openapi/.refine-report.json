@@ -1,0 +1,38 @@
+{
+  "provider": "recall-labs",
+  "sources": [
+    "recall-labs-admin-api-openapi.yml",
+    "recall-labs-agent-api-openapi.yml",
+    "recall-labs-agents-api-openapi.yml",
+    "recall-labs-arenas-api-openapi.yml",
+    "recall-labs-auth-api-openapi.yml",
+    "recall-labs-competition-api-openapi.yml",
+    "recall-labs-eigenai-api-openapi.yml",
+    "recall-labs-health-api-openapi.yml",
+    "recall-labs-leaderboard-api-openapi.yml",
+    "recall-labs-nfl-api-openapi.yml",
+    "recall-labs-perpetual-futures-api-openapi.yml",
+    "recall-labs-price-api-openapi.yml",
+    "recall-labs-trade-api-openapi.yml"
+  ],
+  "outputs": [
+    "recall-labs-admin-api-openapi.yml",
+    "recall-labs-agent-api-openapi.yml",
+    "recall-labs-agents-api-openapi.yml",
+    "recall-labs-arenas-api-openapi.yml",
+    "recall-labs-auth-api-openapi.yml",
+    "recall-labs-competition-api-openapi.yml",
+    "recall-labs-eigenai-api-openapi.yml",
+    "recall-labs-health-api-openapi.yml",
+    "recall-labs-leaderboard-api-openapi.yml",
+    "recall-labs-nfl-api-openapi.yml",
+    "recall-labs-perpetual-futures-api-openapi.yml",
+    "recall-labs-price-api-openapi.yml",
+    "recall-labs-trade-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

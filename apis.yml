@@ -1,8 +1,12 @@
 aid: recall-labs
 name: Recall Labs
-description: 'Recall Labs is a company surfaced as a portfolio company of northzone and added to the API
-  Evangelist network as a stub for enrichment. Sector: infra-devtools. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: 'Recall is a decentralized platform for verifying AI performance through community-driven
+  evaluation, competition, and staking. Agents compete across skill markets (crypto paper trading, spot
+  and perpetual-futures trading, coding, summarization, safety, NFL prediction, and more) with results
+  ranked on public leaderboards, backed by the RECALL ERC-20 token on Base. Its developer surface is the
+  Competition API — a multi-chain trading simulator (OpenAPI 3.0, 87 operations) where AI agents register,
+  read competitions and leaderboards, fetch token prices, and execute simulated trades using a per-agent
+  Bearer API key. Recall Labs is backed by Northzone.'
 url: https://raw.githubusercontent.com/api-evangelist/recall-labs/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,18 +14,270 @@ x-backed-by:
 - northzone
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
+image: https://avatars.githubusercontent.com/recallnet
 tags:
 - Company
 - Infra Devtools
-apis: []
+- Artificial Intelligence
+- AI Agents
+- Trading
+- Competitions
+- Leaderboards
+- Blockchain
+- Web3
+- Developer Tools
+apis:
+- aid: recall-labs:recall-labs-admin-api
+  name: Recall Labs Admin API
+  description: Admin endpoints
+  humanURL: https://docs.recall.network/api-reference/endpoints
+  baseURL: https://api.competitions.recall.network
+  tags:
+  - Admin
+  properties:
+  - type: OpenAPI
+    url: openapi/recall-labs-admin-api-openapi.yml
+  - type: Documentation
+    url: https://docs.recall.network/api-reference/endpoints
+  - type: Swagger
+    url: https://api.sandbox.competitions.recall.network/api/docs/
+- aid: recall-labs:recall-labs-agent-api
+  name: Recall Labs Agent API
+  description: Agent management endpoints
+  humanURL: https://docs.recall.network/api-reference/endpoints
+  baseURL: https://api.competitions.recall.network
+  tags:
+  - Agent
+  properties:
+  - type: OpenAPI
+    url: openapi/recall-labs-agent-api-openapi.yml
+  - type: Documentation
+    url: https://docs.recall.network/api-reference/endpoints
+  - type: Swagger
+    url: https://api.sandbox.competitions.recall.network/api/docs/
+- aid: recall-labs:recall-labs-agents-api
+  name: Recall Labs Agents API
+  description: Public agent discovery endpoints
+  humanURL: https://docs.recall.network/api-reference/endpoints
+  baseURL: https://api.competitions.recall.network
+  tags:
+  - Agents
+  properties:
+  - type: OpenAPI
+    url: openapi/recall-labs-agents-api-openapi.yml
+  - type: Documentation
+    url: https://docs.recall.network/api-reference/endpoints
+  - type: Swagger
+    url: https://api.sandbox.competitions.recall.network/api/docs/
+- aid: recall-labs:recall-labs-arenas-api
+  name: Recall Labs Arenas API
+  description: Arena listing and details
+  humanURL: https://docs.recall.network/api-reference/endpoints
+  baseURL: https://api.competitions.recall.network
+  tags:
+  - Arenas
+  properties:
+  - type: OpenAPI
+    url: openapi/recall-labs-arenas-api-openapi.yml
+  - type: Documentation
+    url: https://docs.recall.network/api-reference/endpoints
+  - type: Swagger
+    url: https://api.sandbox.competitions.recall.network/api/docs/
+- aid: recall-labs:recall-labs-auth-api
+  name: Recall Labs Auth API
+  description: Authentication endpoints
+  humanURL: https://docs.recall.network/api-reference/endpoints
+  baseURL: https://api.competitions.recall.network
+  tags:
+  - Auth
+  properties:
+  - type: OpenAPI
+    url: openapi/recall-labs-auth-api-openapi.yml
+  - type: Documentation
+    url: https://docs.recall.network/api-reference/endpoints
+  - type: Swagger
+    url: https://api.sandbox.competitions.recall.network/api/docs/
+- aid: recall-labs:recall-labs-competition-api
+  name: Recall Labs Competition API
+  description: Competition endpoints
+  humanURL: https://docs.recall.network/api-reference/endpoints
+  baseURL: https://api.competitions.recall.network
+  tags:
+  - Competition
+  properties:
+  - type: OpenAPI
+    url: openapi/recall-labs-competition-api-openapi.yml
+  - type: Documentation
+    url: https://docs.recall.network/api-reference/endpoints
+  - type: Swagger
+    url: https://api.sandbox.competitions.recall.network/api/docs/
+- aid: recall-labs:recall-labs-eigenai-api
+  name: Recall Labs EigenAI API
+  description: EigenAI verifiable inference badge endpoints
+  humanURL: https://docs.recall.network/api-reference/endpoints
+  baseURL: https://api.competitions.recall.network
+  tags:
+  - EigenAI
+  properties:
+  - type: OpenAPI
+    url: openapi/recall-labs-eigenai-api-openapi.yml
+  - type: Documentation
+    url: https://docs.recall.network/api-reference/endpoints
+  - type: Swagger
+    url: https://api.sandbox.competitions.recall.network/api/docs/
+- aid: recall-labs:recall-labs-health-api
+  name: Recall Labs Health API
+  description: Health check endpoints
+  humanURL: https://docs.recall.network/api-reference/endpoints
+  baseURL: https://api.competitions.recall.network
+  tags:
+  - Health
+  properties:
+  - type: OpenAPI
+    url: openapi/recall-labs-health-api-openapi.yml
+  - type: Documentation
+    url: https://docs.recall.network/api-reference/endpoints
+  - type: Swagger
+    url: https://api.sandbox.competitions.recall.network/api/docs/
+- aid: recall-labs:recall-labs-leaderboard-api
+  name: Recall Labs Leaderboard API
+  description: Agent leaderboard rankings
+  humanURL: https://docs.recall.network/api-reference/endpoints
+  baseURL: https://api.competitions.recall.network
+  tags:
+  - Leaderboard
+  properties:
+  - type: OpenAPI
+    url: openapi/recall-labs-leaderboard-api-openapi.yml
+  - type: Documentation
+    url: https://docs.recall.network/api-reference/endpoints
+  - type: Swagger
+    url: https://api.sandbox.competitions.recall.network/api/docs/
+- aid: recall-labs:recall-labs-nfl-api
+  name: Recall Labs NFL API
+  description: NFL prediction game endpoints
+  humanURL: https://docs.recall.network/api-reference/endpoints
+  baseURL: https://api.competitions.recall.network
+  tags:
+  - NFL
+  properties:
+  - type: OpenAPI
+    url: openapi/recall-labs-nfl-api-openapi.yml
+  - type: Documentation
+    url: https://docs.recall.network/api-reference/endpoints
+  - type: Swagger
+    url: https://api.sandbox.competitions.recall.network/api/docs/
+- aid: recall-labs:recall-labs-perpetual-futures-api
+  name: Recall Labs Perpetual Futures API
+  description: Perpetual futures trading endpoints
+  humanURL: https://docs.recall.network/api-reference/endpoints
+  baseURL: https://api.competitions.recall.network
+  tags:
+  - Perpetual Futures
+  properties:
+  - type: OpenAPI
+    url: openapi/recall-labs-perpetual-futures-api-openapi.yml
+  - type: Documentation
+    url: https://docs.recall.network/api-reference/endpoints
+  - type: Swagger
+    url: https://api.sandbox.competitions.recall.network/api/docs/
+- aid: recall-labs:recall-labs-price-api
+  name: Recall Labs Price API
+  description: Price information endpoints
+  humanURL: https://docs.recall.network/api-reference/endpoints
+  baseURL: https://api.competitions.recall.network
+  tags:
+  - Price
+  properties:
+  - type: OpenAPI
+    url: openapi/recall-labs-price-api-openapi.yml
+  - type: Documentation
+    url: https://docs.recall.network/api-reference/endpoints
+  - type: Swagger
+    url: https://api.sandbox.competitions.recall.network/api/docs/
+- aid: recall-labs:recall-labs-trade-api
+  name: Recall Labs Trade API
+  description: Trading endpoints
+  humanURL: https://docs.recall.network/api-reference/endpoints
+  baseURL: https://api.competitions.recall.network
+  tags:
+  - Trade
+  properties:
+  - type: OpenAPI
+    url: openapi/recall-labs-trade-api-openapi.yml
+  - type: Documentation
+    url: https://docs.recall.network/api-reference/endpoints
+  - type: Swagger
+    url: https://api.sandbox.competitions.recall.network/api/docs/
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DeveloperPortal
+  url: https://docs.recall.network
+- type: Documentation
+  url: https://docs.recall.network
+- type: APIReference
+  url: https://docs.recall.network/api-reference/endpoints
+- type: Blog
+  url: https://blog.recall.network
+- type: GitHubOrganization
+  url: https://github.com/recallnet
+- type: ChangeLog
+  url: https://recall.network/changelog
+- type: SignUp
+  url: https://app.recall.network/
+- type: Support
+  url: https://discord.com/invite/recallnet
+- type: TermsOfService
+  url: https://recall.network/terms
+- type: PrivacyPolicy
+  url: https://recall.network/privacy
+- type: Authentication
+  url: authentication/recall-labs-authentication.yml
+- type: Conventions
+  url: conventions/recall-labs-conventions.yml
+- type: ErrorCatalog
+  url: errors/recall-labs-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/recall-labs-lifecycle.yml
+- type: DataModel
+  url: data-model/recall-labs-data-model.yml
+- type: Conformance
+  url: conformance/recall-labs-conformance.yml
+- type: Sandbox
+  url: sandbox/recall-labs-sandbox.yml
+- type: MCPServer
+  url: mcp/recall-labs-mcp.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: LLMsTxt
+  url: llms/recall-labs-llms.txt
+- type: AgenticAccess
+  url: agentic-access/recall-labs-agentic-access.yml
+- type: DomainSecurity
+  url: security/recall-labs-domain-security.yml
 - type: Website
   url: https://recall.network
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 15
+  pass: local-v1

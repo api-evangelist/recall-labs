@@ -1,0 +1,19 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Recall Trading Simulator API
+  version: 1.0.0
+extends: openapi/recall-labs-competitions-openapi.json
+actions:
+  - target: $.info
+    update:
+      x-apievangelist-provider: recall-labs
+      x-apievangelist-product: Recall Competition API (multi-chain trading simulator)
+      x-apievangelist-auth: bearer-api-key
+      x-apievangelist-environments:
+        production: https://api.competitions.recall.network
+        sandbox: https://api.sandbox.competitions.recall.network
+  - target: $.info
+    update:
+      x-apievangelist-conventions: conventions/recall-labs-conventions.yml
+      x-apievangelist-errors: errors/recall-labs-problem-types.yml
+      x-apievangelist-data-model: data-model/recall-labs-data-model.yml

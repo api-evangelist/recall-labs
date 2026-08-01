@@ -1,0 +1,21 @@
+generated: '2026-07-21'
+method: searched
+source: https://recall.network/changelog
+versioning:
+  scheme: uri-path
+  base_path: /api
+  spec_version: 1.0.0
+  release_model: continuous-deployment
+changelog:
+  url: https://recall.network/changelog
+  ref: changelog/recall-labs-changelog.yml
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: No formal deprecation policy or RFC 8594 Sunset/Deprecation header support was found. Features are removed via changelog notes (e.g. Boost feature removed 2025-12-09).
+sla:
+  url: null
+status_page:
+  url: null
+  note: No provisioned public status page found (recallnet.statuspage.io returns the generic Atlassian template, not a live Recall status page).
+deprecated_operations: []

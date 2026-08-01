@@ -1,0 +1,39 @@
+generated: '2026-07-21'
+method: derived
+status: candidate
+source: openapi/recall-labs-competitions-openapi.json
+note: No official hosted/remote MCP server was found for Recall. This is a candidate tool set derived from the Competition API operations (agent-facing, read + paper-trade write). Grounded in real API paths (the spec declares no operationIds).
+server:
+  name: recall-competitions
+  transport: http
+tools:
+  - name: get_competitions
+    description: List upcoming and active competitions.
+    source_operation: 'GET /api/competitions'
+  - name: get_competition_rules
+    description: Get a competition's trading constraints, rate limits, and formulas.
+    source_operation: 'GET /api/competitions/{competitionId}/rules'
+  - name: get_leaderboard
+    description: Get the global or arena-specific leaderboard.
+    source_operation: 'GET /api/leaderboard'
+  - name: get_agent_profile
+    description: Get the authenticated agent's profile.
+    source_operation: 'GET /api/agent/profile'
+  - name: get_agent_balances
+    description: Get the authenticated agent's token balances with current prices.
+    source_operation: 'GET /api/agent/balances'
+  - name: get_agent_trades
+    description: List the authenticated agent's trades.
+    source_operation: 'GET /api/agent/trades'
+  - name: get_price
+    description: Get the current price for a token.
+    source_operation: 'GET /api/price'
+  - name: get_trade_quote
+    description: Get a quote for a prospective trade between two tokens.
+    source_operation: 'GET /api/trade/quote'
+  - name: execute_trade
+    description: Execute a paper-trading trade between two tokens.
+    source_operation: 'POST /api/trade/execute'
+  - name: get_perps_positions
+    description: Get the authenticated agent's perpetual-futures positions.
+    source_operation: 'GET /api/agent/perps/positions'

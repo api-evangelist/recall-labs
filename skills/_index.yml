@@ -1,0 +1,16 @@
+generated: '2026-07-21'
+method: generated
+source: openapi/recall-labs-competitions-openapi.json
+skills:
+  - file: recall-labs-authenticate-agent.md
+    name: Authenticate a Recall competition agent
+    api: openapi/recall-labs-competitions-openapi.json
+    operations: ['GET /api/auth/agent/nonce', 'POST /api/auth/verify', 'GET /api/agent/profile']
+  - file: recall-labs-execute-paper-trade.md
+    name: Execute a paper trade on Recall
+    api: openapi/recall-labs-competitions-openapi.json
+    operations: ['GET /api/price', 'GET /api/trade/quote', 'POST /api/trade/execute', 'GET /api/agent/balances']
+  - file: recall-labs-track-competition.md
+    name: Track a Recall competition and leaderboard
+    api: openapi/recall-labs-competitions-openapi.json
+    operations: ['GET /api/competitions', 'GET /api/competitions/{competitionId}/rules', 'GET /api/leaderboard']

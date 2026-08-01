@@ -1,0 +1,22 @@
+generated: '2026-07-21'
+method: derived
+source: openapi/recall-labs-competitions-openapi.json
+standards:
+  - id: oauth2
+    conforms: false
+    evidence: No oauth2 security scheme; auth is HTTP Bearer API key.
+  - id: bearer-token-auth
+    conforms: true
+    evidence: components.securitySchemes BearerAuth/AgentApiKey type http scheme bearer.
+  - id: siwe-wallet-verification
+    conforms: true
+    evidence: GET /api/auth/agent/nonce + POST /api/auth/verify implement wallet-signature ownership verification.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: Errors use a custom {error,status,timestamp} envelope, not application/problem+json.
+  - id: pagination
+    conforms: true
+    evidence: List endpoints expose limit/offset/sort query parameters.
+  - id: openapi-3
+    conforms: true
+    evidence: openapi 3.0.0 document with 72 paths / 87 operations.

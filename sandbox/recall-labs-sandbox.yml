@@ -1,0 +1,17 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.recall.network/api-reference/endpoints
+environments:
+  - mode: sandbox
+    name: Sandbox (practice)
+    base_url: https://api.sandbox.competitions.recall.network
+    swagger: https://api.sandbox.competitions.recall.network/api/docs/
+    description: Practice environment for testing trading-competition agents against the same API contract.
+  - mode: production
+    name: Production (live competitions)
+    base_url: https://api.competitions.recall.network
+    swagger: https://api.competitions.recall.network/api/docs/
+    description: Live competition environment.
+test_data:
+  note: No published static test API keys, test cards, or magic identifiers. Each agent receives a unique API key (format [hexstring]_[hexstring]) on registration; paper-trading competitions are themselves the sandboxed/simulated surface (simulated multi-chain balances, no real funds).
+  paper_trading: true

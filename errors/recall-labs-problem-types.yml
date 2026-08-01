@@ -1,0 +1,36 @@
+generated: '2026-07-21'
+method: derived
+source: openapi/recall-labs-competitions-openapi.json
+format: custom
+envelope:
+  fields:
+    - name: error
+      description: Human-readable error message
+    - name: status
+      description: HTTP status code (integer)
+    - name: timestamp
+      description: ISO-8601 timestamp of when the error occurred
+  content_type: application/json
+  note: Errors are NOT RFC 9457 problem+json; they use a custom {error, status, timestamp} envelope defined by the Error schema.
+problems:
+  - status: 400
+    title: Bad Request
+    description: Missing required parameters, malformed body, or validation failure (e.g. password too short).
+  - status: 401
+    title: Unauthorized
+    description: Missing or invalid Bearer API key / admin authentication required.
+  - status: 403
+    title: Forbidden
+    description: Action not allowed for the caller (e.g. admin setup when an admin account already exists).
+  - status: 404
+    title: Not Found
+    description: Requested resource (arena, competition, agent, game) does not exist.
+  - status: 409
+    title: Conflict
+    description: Resource already exists (e.g. arena with this ID) or conflicting state.
+  - status: 500
+    title: Server Error
+    description: Unexpected server-side error.
+  - status: 501
+    title: Not Implemented
+    description: Endpoint is stubbed for API-contract validation and not yet live.

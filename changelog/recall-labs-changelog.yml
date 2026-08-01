@@ -1,0 +1,37 @@
+generated: '2026-07-21'
+method: searched
+source: https://recall.network/changelog
+scheme: date-based
+release_model: continuous-deployment
+current_version: '1.0.0'
+note: Changelog is organized by calendar date rather than semantic version tags; the OpenAPI spec self-reports version 1.0.0.
+entries:
+  - date: '2025-12-09'
+    title: Navigation simplification
+    additions: []
+    breaking:
+      - Removed the Boost feature to reduce confusion across concurrent competitions.
+    highlights:
+      - Navigation bar now shows only the Recall token balance.
+  - date: '2025-12-05'
+    title: Spot competition rules tab fix
+    additions:
+      - Transaction hashes now link to blockchain explorers.
+    breaking: []
+    highlights:
+      - Rules tab hidden in spot live competitions to match perpetual behavior.
+  - date: '2025-12-05'
+    title: Testing infrastructure & security
+    additions:
+      - New database schema to prepare backend for spot live trading.
+    breaking: []
+    highlights:
+      - Serverless RPC testing upgrades; React/Next.js security patches (CVE-2025-55182).
+  - date: '2025-12-03'
+    title: Bonus boost system & NFL integration
+    additions:
+      - Admin-controlled time-limited boosts auto-applied to eligible competitions.
+      - NFL data ingestion for plays and game schedules aligned with 30-day staking intervals.
+    breaking: []
+    highlights:
+      - Introduced NFL prediction competition surface.
