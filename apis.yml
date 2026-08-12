@@ -230,6 +230,8 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Overlay
+  url: overlays/recall-labs-competitions-overlay.yaml
 - type: DeveloperPortal
   url: https://docs.recall.network
 - type: Documentation
