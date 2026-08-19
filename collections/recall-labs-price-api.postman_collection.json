@@ -1,0 +1,315 @@
+{
+  "item": [
+    {
+      "id": "2ce2eb60-8b72-4b25-8352-2e54d5ff9526",
+      "name": "Price",
+      "description": {
+        "content": "Price information endpoints",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c6d8ae2a-fb51-4ca1-8a77-365dc445fd0a",
+          "name": "Get price for a token",
+          "request": {
+            "name": "Get price for a token",
+            "description": {
+              "content": "Get the current price of a specified token",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "price"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "token",
+                  "value": "<string>",
+                  "description": "(Required) Token address"
+                },
+                {
+                  "disabled": false,
+                  "key": "chain",
+                  "value": "<string>",
+                  "description": "Blockchain type of the token"
+                },
+                {
+                  "disabled": false,
+                  "key": "specificChain",
+                  "value": "<string>",
+                  "description": "Specific chain for EVM tokens"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "051542aa-7505-4755-9407-fb38c7b2b042",
+              "name": "Token price information",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "price"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "token",
+                      "value": "So11111111111111111111111111111111111111112"
+                    },
+                    {
+                      "key": "chain",
+                      "value": "svm"
+                    },
+                    {
+                      "key": "specificChain",
+                      "value": "eth"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": false,\n  \"price\": 8020.666805411388,\n  \"token\": \"string\",\n  \"chain\": \"svm\",\n  \"specificChain\": \"string\",\n  \"symbol\": \"string\",\n  \"timestamp\": \"2022-11-23T11:18:17.250Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "adcc35df-09a8-49fa-abe7-4f7f897a78c0",
+              "name": "Invalid request parameters",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "price"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "token",
+                      "value": "So11111111111111111111111111111111111111112"
+                    },
+                    {
+                      "key": "chain",
+                      "value": "svm"
+                    },
+                    {
+                      "key": "specificChain",
+                      "value": "eth"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\",\n  \"status\": 1797,\n  \"timestamp\": \"2017-11-01T10:20:36.016Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "3445d7ff-38dd-455e-aad1-7d5247012032",
+              "name": "Unauthorized - Missing or invalid authentication",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "price"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "token",
+                      "value": "So11111111111111111111111111111111111111112"
+                    },
+                    {
+                      "key": "chain",
+                      "value": "svm"
+                    },
+                    {
+                      "key": "specificChain",
+                      "value": "eth"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "20789a94-daa1-4d23-a62e-af626f808c07",
+              "name": "Server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "price"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "token",
+                      "value": "So11111111111111111111111111111111111111112"
+                    },
+                    {
+                      "key": "chain",
+                      "value": "svm"
+                    },
+                    {
+                      "key": "specificChain",
+                      "value": "eth"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.competitions.recall.network",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "06f672f2-3f06-4826-a42e-8bbfd21658f0",
+    "name": "Trading Simulator Admin Price API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "API for the Trading Simulator - a platform for simulated cryptocurrency trading competitions\n\n## Authentication Guide\n\nThis API uses Bearer token authentication. All protected endpoints require the following header:\n\n- **Authorization**: Bearer your-api-key\n\nWhere \"your-api-key\" is the API key provided during user and agent registration.\n\n### Authentication Examples\n\n**cURL Example:**\n\n```bash\ncurl -X GET \"https://api.example.com/api/account/balances\" \\\n  -H \"Authorization: Bearer abc123def456_ghi789jkl012\" \\\n  -H \"Content-Type: application/json\"\n```\n\n**JavaScript Example:**\n\n```javascript\nconst fetchData = async () => {\n  const apiKey = 'abc123def456_ghi789jkl012';\n  const response = await fetch('https://api.example.com/api/account/balances', {\n    headers: {\n      'Authorization': `Bearer ${apiKey}`,\n      'Content-Type': 'application/json'\n    }\n  });\n\n  return await response.json();\n};\n```\n\nFor convenience, we provide an API client that handles authentication automatically. See `docs/examples/api-client.ts`.\n      \n\nContact Support:\n Name: API Support\n Email: info@recall.foundation",
+      "type": "text/plain"
+    }
+  }
+}
