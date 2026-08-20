@@ -62,6 +62,8 @@ apis:
   humanURL: https://docs.recall.network/api-reference/endpoints
   baseURL: https://api.competitions.recall.network
   tags:
+  - Agents
+  tags_raw:
   - Agent
   properties:
   - type: OpenAPI
@@ -104,6 +106,8 @@ apis:
   humanURL: https://docs.recall.network/api-reference/endpoints
   baseURL: https://api.competitions.recall.network
   tags:
+  - Authentication
+  tags_raw:
   - Auth
   properties:
   - type: OpenAPI
