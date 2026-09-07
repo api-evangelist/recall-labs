@@ -248,6 +248,12 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Quickstart
+  url: https://docs.recall.network/quickstart
+- type: SDKs
+  url: packages/recall-labs-packages.yml
+- type: Packages
+  url: packages/recall-labs-packages.yml
 - type: Overlay
   url: overlays/recall-labs-competitions-overlay.yaml
 - type: DeveloperPortal
@@ -302,5 +308,3 @@ x-enrichment:
   status: enriched
   artifacts_added: 15
   pass: local-v1
-x-parent: recall
-x-relationship: product
