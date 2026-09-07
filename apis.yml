@@ -302,3 +302,5 @@ x-enrichment:
   status: enriched
   artifacts_added: 15
   pass: local-v1
+x-parent: recall
+x-relationship: product
