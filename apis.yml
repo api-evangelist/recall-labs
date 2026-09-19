@@ -136,6 +136,8 @@ apis:
   humanURL: https://docs.recall.network/api-reference/endpoints
   baseURL: https://api.competitions.recall.network
   tags:
+  - Competitions
+  tags_raw:
   - Competition
   properties:
   - type: OpenAPI
@@ -178,6 +180,8 @@ apis:
   humanURL: https://docs.recall.network/api-reference/endpoints
   baseURL: https://api.competitions.recall.network
   tags:
+  - Leaderboards
+  tags_raw:
   - Leaderboard
   properties:
   - type: OpenAPI
