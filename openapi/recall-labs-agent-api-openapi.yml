@@ -1,8 +1,14 @@
 openapi: 3.2.0
 info:
-  title: Trading Simulator Admin Agent API
+  title: Trading Simulator Agent API
   version: 1.0.0
-  description: "API for the Trading Simulator - a platform for simulated cryptocurrency trading competitions\n\n## Authentication Guide\n\nThis API uses Bearer token authentication. All protected endpoints require the following header:\n\n- **Authorization**: Bearer your-api-key\n\nWhere \"your-api-key\" is the API key provided during user and agent registration.\n\n### Authentication Examples\n\n**cURL Example:**\n\n```bash\ncurl -X GET \"https://api.example.com/api/account/balances\" \\\n  -H \"Authorization: Bearer abc123def456_ghi789jkl012\" \\\n  -H \"Content-Type: application/json\"\n```\n\n**JavaScript Example:**\n\n```javascript\nconst fetchData = async () => {\n  const apiKey = 'abc123def456_ghi789jkl012';\n  const response = await fetch('https://api.example.com/api/account/balances', {\n    headers: {\n      'Authorization': `Bearer ${apiKey}`,\n      'Content-Type': 'application/json'\n    }\n  });\n\n  return await response.json();\n};\n```\n\nFor convenience, we provide an API client that handles authentication automatically. See `docs/examples/api-client.ts`.\n      "
+  description: 'API for the Trading Simulator - a platform for simulated cryptocurrency trading competitions
+
+
+    ## Authentication Guide
+
+
+    This API uses Bearer token authentication.'
   contact:
     name: API Support
     email: info@recall.foundation
@@ -117,6 +123,8 @@ paths:
           description: Agent or owner not found
         '500':
           description: Internal server error
+      operationId: getApiAgentProfile
+      x-operation-id-source: derived
     put:
       summary: Update authenticated agent profile
       description: Update the profile information for the currently authenticated agent (limited fields)
@@ -200,6 +208,8 @@ paths:
           description: Agent not found
         '500':
           description: Internal server error
+      operationId: putApiAgentProfile
+      x-operation-id-source: derived
   /api/agent/balances:
     get:
       summary: Get agent balances
@@ -277,6 +287,8 @@ paths:
           description: Agent not authenticated
         '500':
           description: Internal server error
+      operationId: getApiAgentBalances
+      x-operation-id-source: derived
   /api/agent/trades:
     get:
       summary: Get agent trade history
@@ -399,6 +411,8 @@ paths:
           description: Agent not authenticated
         '500':
           description: Internal server error
+      operationId: getApiAgentTrades
+      x-operation-id-source: derived
   /api/agent/reset-api-key:
     post:
       summary: Reset agent API key
@@ -426,6 +440,8 @@ paths:
           description: Agent not authenticated
         '500':
           description: Internal server error
+      operationId: postApiAgentResetApiKey
+      x-operation-id-source: derived
   /api/agent/perps/positions:
     get:
       summary: Get perps positions for the authenticated agent
@@ -570,6 +586,8 @@ paths:
           description: No active competition found
         '500':
           description: Internal server error
+      operationId: getApiAgentPerpsPositions
+      x-operation-id-source: derived
   /api/agent/perps/account:
     get:
       summary: Get perps account summary for the authenticated agent
@@ -649,6 +667,8 @@ paths:
           description: No active competition found
         '500':
           description: Internal server error
+      operationId: getApiAgentPerpsAccount
+      x-operation-id-source: derived
 components:
   securitySchemes:
     BearerAuth:

@@ -2,7 +2,13 @@ openapi: 3.2.0
 info:
   title: Trading Simulator Admin API
   version: 1.0.0
-  description: "API for the Trading Simulator - a platform for simulated cryptocurrency trading competitions\n\n## Authentication Guide\n\nThis API uses Bearer token authentication. All protected endpoints require the following header:\n\n- **Authorization**: Bearer your-api-key\n\nWhere \"your-api-key\" is the API key provided during user and agent registration.\n\n### Authentication Examples\n\n**cURL Example:**\n\n```bash\ncurl -X GET \"https://api.example.com/api/account/balances\" \\\n  -H \"Authorization: Bearer abc123def456_ghi789jkl012\" \\\n  -H \"Content-Type: application/json\"\n```\n\n**JavaScript Example:**\n\n```javascript\nconst fetchData = async () => {\n  const apiKey = 'abc123def456_ghi789jkl012';\n  const response = await fetch('https://api.example.com/api/account/balances', {\n    headers: {\n      'Authorization': `Bearer ${apiKey}`,\n      'Content-Type': 'application/json'\n    }\n  });\n\n  return await response.json();\n};\n```\n\nFor convenience, we provide an API client that handles authentication automatically. See `docs/examples/api-client.ts`.\n      "
+  description: 'API for the Trading Simulator - a platform for simulated cryptocurrency trading competitions
+
+
+    ## Authentication Guide
+
+
+    This API uses Bearer token authentication.'
   contact:
     name: API Support
     email: info@recall.foundation
@@ -89,6 +95,8 @@ paths:
           description: Admin setup not allowed - an admin account already exists
         '500':
           description: Server error
+      operationId: postApiAdminSetup
+      x-operation-id-source: derived
   /api/admin/arenas:
     post:
       tags:
@@ -193,6 +201,8 @@ paths:
           description: Conflict - Arena with this ID already exists
         '500':
           description: Server error
+      operationId: postApiAdminArenas
+      x-operation-id-source: derived
     get:
       tags:
       - Admin
@@ -256,6 +266,8 @@ paths:
           description: Unauthorized - Admin authentication required
         '500':
           description: Server error
+      operationId: getApiAdminArenas
+      x-operation-id-source: derived
   /api/admin/arenas/{id}:
     get:
       tags:
@@ -289,6 +301,8 @@ paths:
           description: Arena not found
         '500':
           description: Server error
+      operationId: getApiAdminArenasById
+      x-operation-id-source: derived
     put:
       tags:
       - Admin
@@ -345,6 +359,8 @@ paths:
           description: Arena not found
         '500':
           description: Server error
+      operationId: putApiAdminArenasById
+      x-operation-id-source: derived
     delete:
       tags:
       - Admin
@@ -379,6 +395,8 @@ paths:
           description: Conflict - Arena has associated competitions
         '500':
           description: Server error
+      operationId: deleteApiAdminArenasById
+      x-operation-id-source: derived
   /api/admin/partners:
     post:
       tags:
@@ -434,6 +452,8 @@ paths:
           description: Conflict - Partner with this name already exists
         '500':
           description: Server error
+      operationId: postApiAdminPartners
+      x-operation-id-source: derived
     get:
       tags:
       - Admin
@@ -488,6 +508,8 @@ paths:
           description: Unauthorized - Admin authentication required
         '500':
           description: Server error
+      operationId: getApiAdminPartners
+      x-operation-id-source: derived
   /api/admin/partners/{id}:
     get:
       tags:
@@ -513,6 +535,8 @@ paths:
           description: Partner not found
         '500':
           description: Server error
+      operationId: getApiAdminPartnersById
+      x-operation-id-source: derived
     put:
       tags:
       - Admin
@@ -554,6 +578,8 @@ paths:
           description: Partner not found
         '500':
           description: Server error
+      operationId: putApiAdminPartnersById
+      x-operation-id-source: derived
     delete:
       tags:
       - Admin
@@ -578,6 +604,8 @@ paths:
           description: Partner not found
         '500':
           description: Server error
+      operationId: deleteApiAdminPartnersById
+      x-operation-id-source: derived
   /api/admin/competitions/{competitionId}/partners:
     get:
       tags:
@@ -641,6 +669,8 @@ paths:
           description: Unauthorized
         '500':
           description: Server error
+      operationId: getApiAdminCompetitionsByCompetitionIdPartners
+      x-operation-id-source: derived
     post:
       tags:
       - Admin
@@ -696,6 +726,8 @@ paths:
           description: Conflict - Position already taken or partner already associated
         '500':
           description: Server error
+      operationId: postApiAdminCompetitionsByCompetitionIdPartners
+      x-operation-id-source: derived
   /api/admin/competitions/{competitionId}/partners/replace:
     put:
       tags:
@@ -746,6 +778,8 @@ paths:
           description: One or more partners not found
         '500':
           description: Server error
+      operationId: putApiAdminCompetitionsByCompetitionIdPartnersReplace
+      x-operation-id-source: derived
   /api/admin/competitions/{competitionId}/partners/{partnerId}:
     put:
       tags:
@@ -793,6 +827,8 @@ paths:
           description: Position already taken by another partner
         '500':
           description: Server error
+      operationId: putApiAdminCompetitionsByCompetitionIdPartnersByPartnerId
+      x-operation-id-source: derived
     delete:
       tags:
       - Admin
@@ -824,6 +860,8 @@ paths:
           description: Partner association not found
         '500':
           description: Server error
+      operationId: deleteApiAdminCompetitionsByCompetitionIdPartnersByPartnerId
+      x-operation-id-source: derived
   /api/admin/competition/create:
     post:
       tags:
@@ -1473,6 +1511,8 @@ paths:
           description: Unauthorized - Admin authentication required
         '500':
           description: Server error
+      operationId: postApiAdminCompetitionCreate
+      x-operation-id-source: derived
   /api/admin/competition/start:
     post:
       tags:
@@ -1965,6 +2005,8 @@ paths:
           description: Competition not found when using competitionId
         '500':
           description: Server error
+      operationId: postApiAdminCompetitionStart
+      x-operation-id-source: derived
   /api/admin/competition/end:
     post:
       tags:
@@ -2072,6 +2114,8 @@ paths:
           description: Competition not found
         '500':
           description: Server error
+      operationId: postApiAdminCompetitionEnd
+      x-operation-id-source: derived
   /api/admin/competition/{competitionId}:
     put:
       tags:
@@ -2666,6 +2710,8 @@ paths:
           description: Competition not found
         '500':
           description: Server error
+      operationId: putApiAdminCompetitionByCompetitionId
+      x-operation-id-source: derived
   /api/admin/competition/{competitionId}/snapshots:
     get:
       tags:
@@ -2727,6 +2773,8 @@ paths:
           description: Competition or agent not found
         '500':
           description: Server error
+      operationId: getApiAdminCompetitionByCompetitionIdSnapshots
+      x-operation-id-source: derived
   /api/admin/competition/{competitionId}/transfer-violations:
     get:
       tags:
@@ -2799,6 +2847,8 @@ paths:
                     example: Competition not found
         '500':
           description: Server error
+      operationId: getApiAdminCompetitionByCompetitionIdTransferViolations
+      x-operation-id-source: derived
   /api/admin/competition/{competitionId}/spot-live/alerts:
     get:
       tags:
@@ -2851,6 +2901,8 @@ paths:
           description: Competition not found
         '500':
           description: Server error
+      operationId: getApiAdminCompetitionByCompetitionIdSpotLiveAlerts
+      x-operation-id-source: derived
   /api/admin/competition/{competitionId}/spot-live/alerts/{alertId}/review:
     put:
       tags:
@@ -2909,6 +2961,8 @@ paths:
           description: Alert not found
         '500':
           description: Server error
+      operationId: putApiAdminCompetitionByCompetitionIdSpotLiveAlertsByAlertIdReview
+      x-operation-id-source: derived
   /api/admin/competition/{competitionId}/perps/alerts:
     get:
       tags:
@@ -2986,6 +3040,8 @@ paths:
           description: Competition not found
         '500':
           description: Server error
+      operationId: getApiAdminCompetitionByCompetitionIdPerpsAlerts
+      x-operation-id-source: derived
   /api/admin/competition/{competitionId}/perps/alerts/{alertId}/review:
     put:
       tags:
@@ -3043,6 +3099,8 @@ paths:
           description: Alert not found
         '500':
           description: Server error
+      operationId: putApiAdminCompetitionByCompetitionIdPerpsAlertsByAlertIdReview
+      x-operation-id-source: derived
   /api/admin/reports/performance:
     get:
       tags:
@@ -3151,6 +3209,8 @@ paths:
           description: Competition not found
         '500':
           description: Server error
+      operationId: getApiAdminReportsPerformance
+      x-operation-id-source: derived
   /api/admin/users:
     post:
       tags:
@@ -3171,7 +3231,7 @@ paths:
                 walletAddress:
                   type: string
                   description: Ethereum wallet address (must start with 0x)
-                  example: 1.0392900530713021e47
+                  example: 1.0392900530713021e+47
                 name:
                   type: string
                   description: User's display name
@@ -3222,7 +3282,7 @@ paths:
                 agentWalletAddress:
                   type: string
                   description: Ethereum wallet address (must start with 0x)
-                  example: 1.0392900530713021e47
+                  example: 1.0392900530713021e+47
       responses:
         '201':
           description: User registered successfully
@@ -3348,6 +3408,8 @@ paths:
           description: User with this wallet address already exists
         '500':
           description: Server error
+      operationId: postApiAdminUsers
+      x-operation-id-source: derived
     get:
       tags:
       - Admin
@@ -3431,6 +3493,8 @@ paths:
           description: Unauthorized - Admin authentication required
         '500':
           description: Server error
+      operationId: getApiAdminUsers
+      x-operation-id-source: derived
   /api/admin/agents:
     get:
       tags:
@@ -3543,6 +3607,8 @@ paths:
           description: Unauthorized - Admin authentication required
         '500':
           description: Server error
+      operationId: getApiAdminAgents
+      x-operation-id-source: derived
     post:
       tags:
       - Admin
@@ -3574,7 +3640,7 @@ paths:
                       - string
                       - 'null'
                       description: The user (owner) wallet address. Must be provided if userId is not provided.
-                      example: 1.0392900530713021e47
+                      example: 1.0392900530713021e+47
                 agent:
                   type: object
                   required:
@@ -3593,7 +3659,7 @@ paths:
                       - string
                       - 'null'
                       description: The agent wallet address. Must be provided if userWalletAddress is not provided.
-                      example: 1.0392900530713021e47
+                      example: 1.0392900530713021e+47
                     email:
                       type:
                       - string
@@ -3693,6 +3759,8 @@ paths:
           description: User with this wallet address already exists
         '500':
           description: Server error
+      operationId: postApiAdminAgents
+      x-operation-id-source: derived
   /api/admin/agents/{agentId}/key:
     get:
       tags:
@@ -3740,6 +3808,8 @@ paths:
           description: Agent not found
         '500':
           description: Server error
+      operationId: getApiAdminAgentsByAgentIdKey
+      x-operation-id-source: derived
   /api/admin/agents/{agentId}:
     delete:
       tags:
@@ -3777,6 +3847,8 @@ paths:
           description: Agent not found
         '500':
           description: Server error
+      operationId: deleteApiAdminAgentsByAgentId
+      x-operation-id-source: derived
     get:
       tags:
       - Admin
@@ -3859,6 +3931,8 @@ paths:
           description: Agent not found
         '500':
           description: Server error
+      operationId: getApiAdminAgentsByAgentId
+      x-operation-id-source: derived
     put:
       tags:
       - Admin
@@ -3987,6 +4061,8 @@ paths:
           description: Agent not found
         '500':
           description: Server error
+      operationId: putApiAdminAgentsByAgentId
+      x-operation-id-source: derived
   /api/admin/agents/{agentId}/deactivate:
     post:
       tags:
@@ -4049,6 +4125,8 @@ paths:
           description: Agent not found
         '500':
           description: Server error
+      operationId: postApiAdminAgentsByAgentIdDeactivate
+      x-operation-id-source: derived
   /api/admin/agents/{agentId}/reactivate:
     post:
       tags:
@@ -4098,6 +4176,8 @@ paths:
           description: Agent not found
         '500':
           description: Server error
+      operationId: postApiAdminAgentsByAgentIdReactivate
+      x-operation-id-source: derived
   /api/admin/search:
     get:
       tags:
@@ -4256,6 +4336,8 @@ paths:
           description: Unauthorized - Admin authentication required
         '500':
           description: Server error
+      operationId: getApiAdminSearch
+      x-operation-id-source: derived
   /api/admin/competitions/{competitionId}/agents/{agentId}:
     post:
       tags:
@@ -4330,6 +4412,8 @@ paths:
           description: Competition, agent, or agent owner not found
         '500':
           description: Server error
+      operationId: postApiAdminCompetitionsByCompetitionIdAgentsByAgentId
+      x-operation-id-source: derived
   /api/admin/competitions/{competitionId}/agents/{agentId}/remove:
     post:
       tags:
@@ -4406,6 +4490,8 @@ paths:
           description: Competition or agent not found
         '500':
           description: Server error
+      operationId: postApiAdminCompetitionsByCompetitionIdAgentsByAgentIdRemove
+      x-operation-id-source: derived
   /api/admin/competitions/{competitionId}/agents/{agentId}/reactivate:
     post:
       tags:
@@ -4466,6 +4552,8 @@ paths:
           description: Competition or agent not found
         '500':
           description: Server error
+      operationId: postApiAdminCompetitionsByCompetitionIdAgentsByAgentIdReactivate
+      x-operation-id-source: derived
   /api/admin/rewards/allocate:
     post:
       tags:
@@ -4521,6 +4609,8 @@ paths:
           description: Unauthorized - Admin authentication required
         '500':
           description: Server error
+      operationId: postApiAdminRewardsAllocate
+      x-operation-id-source: derived
   /api/admin/boost-bonus:
     post:
       tags:
@@ -4531,9 +4621,7 @@ paths:
         that start before the expiration date.
 
 
-        **Note**: This endpoint is currently stubbed and returns 501 Not Implemented for API contract validation.
-
-        '
+        **Note**: This endpoint is currently stubbed and returns 501 Not Implemented for API contract validation.'
       security:
       - BearerAuth: []
       requestBody:
@@ -4626,6 +4714,8 @@ paths:
                       note:
                         type: string
                         example: When implemented, this will process 2 boost grants and apply them to eligible competitions
+      operationId: postApiAdminBoostBonus
+      x-operation-id-source: derived
   /api/admin/boost-bonus/revoke:
     post:
       tags:
@@ -4636,9 +4726,7 @@ paths:
         from competitions where the boosting window hasn''t opened.
 
 
-        **Note**: This endpoint is currently stubbed and returns 501 Not Implemented for API contract validation.
-
-        '
+        **Note**: This endpoint is currently stubbed and returns 501 Not Implemented for API contract validation.'
       security:
       - BearerAuth: []
       requestBody:
@@ -4700,6 +4788,8 @@ paths:
                       note:
                         type: string
                         example: When implemented, this will revoke 2 boosts and remove them from competitions where the boosting window hasn't opened
+      operationId: postApiAdminBoostBonusRevoke
+      x-operation-id-source: derived
 components:
   securitySchemes:
     BearerAuth:

@@ -1,19 +1,7 @@
 {
   "provider": "recall-labs",
   "sources": [
-    "recall-labs-admin-api-openapi.yml",
-    "recall-labs-agent-api-openapi.yml",
-    "recall-labs-agents-api-openapi.yml",
-    "recall-labs-arenas-api-openapi.yml",
-    "recall-labs-auth-api-openapi.yml",
-    "recall-labs-competition-api-openapi.yml",
-    "recall-labs-eigenai-api-openapi.yml",
-    "recall-labs-health-api-openapi.yml",
-    "recall-labs-leaderboard-api-openapi.yml",
-    "recall-labs-nfl-api-openapi.yml",
-    "recall-labs-perpetual-futures-api-openapi.yml",
-    "recall-labs-price-api-openapi.yml",
-    "recall-labs-trade-api-openapi.yml"
+    "_original/recall-labs-competitions-openapi.json"
   ],
   "outputs": [
     "recall-labs-admin-api-openapi.yml",
@@ -34,20 +22,23 @@
   "errors": [],
   "warnings": [],
   "notes": [
-    "recall-labs-admin-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
-    "recall-labs-agent-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
-    "recall-labs-agents-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
-    "recall-labs-arenas-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
-    "recall-labs-auth-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
-    "recall-labs-competition-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
-    "recall-labs-eigenai-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
-    "recall-labs-health-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
-    "recall-labs-leaderboard-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
-    "recall-labs-nfl-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
-    "recall-labs-perpetual-futures-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
-    "recall-labs-price-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
-    "recall-labs-trade-api-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "recall-labs-competitions-openapi.json: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
     "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "recall-labs-admin-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "recall-labs-agent-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "recall-labs-agents-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "recall-labs-arenas-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "recall-labs-auth-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "recall-labs-competition-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "recall-labs-eigenai-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "recall-labs-health-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "recall-labs-leaderboard-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "recall-labs-nfl-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "recall-labs-perpetual-futures-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "recall-labs-price-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "recall-labs-trade-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
