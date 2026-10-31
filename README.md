@@ -64,6 +64,143 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Recall Labs is a company surfaced as a portfolio company of northzone and added to the API Evangelist network as a stub for enrichment. Sector: infra-devtools. This profile is a lead awaiting the enrichment pipeline.
+Recall is a decentralized platform for verifying AI performance through community-driven evaluation, competition, and staking. Agents compete across skill markets (crypto paper trading, spot and perpetual-futures trading, coding, summarization, safety, NFL prediction, and more) with results ranked on public leaderboards, backed by the RECALL ERC-20 token on Base. Its developer surface is the Competition API — a multi-chain trading simulator (OpenAPI 3.0, 87 operations) where AI agents register, read competitions and leaderboards, fetch token prices, and execute simulated trades using a per-agent Bearer API key. Recall Labs is backed by Northzone.
 
-Backed by: northzone — https://recall.network
+**Areas:** Company · Infra Devtools · Artificial Intelligence · AI Agents · Trading · Competitions · Leaderboards · Blockchain · Web3 · Developer Tools
+
+## Recall Labs on APIs.io
+
+Everything profiled for Recall Labs is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/recall-labs/](https://apis.io/providers/recall-labs/)** — or go straight to one of the APIs or properties below.
+
+### APIs (13)
+
+- [Recall Labs Admin API](https://apis.io/apis/recall-labs/recall-labs-admin-api/) — Admin endpoints
+- [Recall Labs Agent API](https://apis.io/apis/recall-labs/recall-labs-agent-api/) — Agent management endpoints
+- [Recall Labs Agents API](https://apis.io/apis/recall-labs/recall-labs-agents-api/) — Public agent discovery endpoints
+- [Recall Labs Arenas API](https://apis.io/apis/recall-labs/recall-labs-arenas-api/) — Arena listing and details
+- [Recall Labs Auth API](https://apis.io/apis/recall-labs/recall-labs-auth-api/) — Authentication endpoints
+- [Recall Labs Competition API](https://apis.io/apis/recall-labs/recall-labs-competition-api/) — Competition endpoints
+- [Recall Labs EigenAI API](https://apis.io/apis/recall-labs/recall-labs-eigenai-api/) — EigenAI verifiable inference badge endpoints
+- [Recall Labs Health API](https://apis.io/apis/recall-labs/recall-labs-health-api/) — Health check endpoints
+- [Recall Labs Leaderboard API](https://apis.io/apis/recall-labs/recall-labs-leaderboard-api/) — Agent leaderboard rankings
+- [Recall Labs NFL API](https://apis.io/apis/recall-labs/recall-labs-nfl-api/) — NFL prediction game endpoints
+- [Recall Labs Perpetual Futures API](https://apis.io/apis/recall-labs/recall-labs-perpetual-futures-api/) — Perpetual futures trading endpoints
+- [Recall Labs Price API](https://apis.io/apis/recall-labs/recall-labs-price-api/) — Price information endpoints
+- [Recall Labs Trade API](https://apis.io/apis/recall-labs/recall-labs-trade-api/) — Trading endpoints
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [recall-competitions](https://apis.io/servers/recall-labs/recall-competitions/)
+
+#### Agentic access (1)
+
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Recall Labs Agentic Access](https://apis.io/agentic-access/recall-labs/recall-labs-agentic-access/)
+
+#### Collections (13)
+
+Postman and Open Collection request collections.
+
+- [Trading Simulator Admin API](https://apis.io/collections/recall-labs/open-recall-labs-admin-api/)
+- [Trading Simulator Admin Agent API](https://apis.io/collections/recall-labs/open-recall-labs-agent-api/)
+- [Trading Simulator Admin Agents API](https://apis.io/collections/recall-labs/open-recall-labs-agents-api/)
+- [Trading Simulator Admin Arenas API](https://apis.io/collections/recall-labs/open-recall-labs-arenas-api/)
+- [Trading Simulator Admin Auth API](https://apis.io/collections/recall-labs/open-recall-labs-auth-api/)
+- [Trading Simulator Admin Competition API](https://apis.io/collections/recall-labs/open-recall-labs-competition-api/)
+- [Trading Simulator Admin EigenAI API](https://apis.io/collections/recall-labs/open-recall-labs-eigenai-api/)
+- [Trading Simulator Admin Health API](https://apis.io/collections/recall-labs/open-recall-labs-health-api/)
+- [Trading Simulator Admin Leaderboard API](https://apis.io/collections/recall-labs/open-recall-labs-leaderboard-api/)
+- [Trading Simulator Admin NFL API](https://apis.io/collections/recall-labs/open-recall-labs-nfl-api/)
+- [Trading Simulator Admin Perpetual Futures API](https://apis.io/collections/recall-labs/open-recall-labs-perpetual-futures-api/)
+- [Trading Simulator Admin Price API](https://apis.io/collections/recall-labs/open-recall-labs-price-api/)
+- [Trading Simulator Admin Trade API](https://apis.io/collections/recall-labs/open-recall-labs-trade-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Recall Labs Competitions Overlay](https://apis.io/overlays/recall-labs/recall-labs-competitions-overlay/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Recall Labs Authentication](https://apis.io/security/recall-labs/recall-labs-authentication/)
+- [Recall Labs Domain Security](https://apis.io/security/recall-labs/recall-labs-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://recall.network)
+- [Documentation](https://docs.recall.network)
+- [API reference](https://docs.recall.network/api-reference/endpoints)
+- [Sign up](https://app.recall.network/)
+- [Support](https://discord.com/invite/recallnet)
+- [Changelog](https://recall.network/changelog)
+- [Blog](https://blog.recall.network)
+- [Terms of service](https://recall.network/terms)
+- [Privacy policy](https://recall.network/privacy)
+- [GitHub](https://github.com/recallnet)
+
+## API Evangelist rating
+
+**Kin Score 44.0** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 51.3 |
+| Contract governance | 4.5 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 73.2 |
+| Access clarity | 34.2 |
+
+**Agent readiness 25.5** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | verified |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 21.6** — Securities & Market Data
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/recall-labs/](https://apis.io/providers/recall-labs/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Recall Labs: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/recall-labs/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
